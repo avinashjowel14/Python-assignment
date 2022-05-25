@@ -1,0 +1,20 @@
+
+N = input()
+strN = str(N)
+lenN = len(N)
+r=''
+
+if (lenN)%2 !=0 :
+   for i in range(0,lenN-3,2):
+       r=r+strN[i:i+2]+','
+
+   r+=strN[lenN-3:]
+   print(r.replace('x',''))
+
+if (lenN)%2 ==0 :
+   strN='x'+strN
+   for i in range(0,lenN-3,2):
+       r=r+strN[i:i+2]+','
+   
+   r+=strN[lenN-2:]
+   print(r.replace('x',''))
